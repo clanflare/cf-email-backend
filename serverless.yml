@@ -15,6 +15,16 @@ provider:
       Action:
         - "ses:SendEmail"
       Resource: "*"  
+  httpApi:
+    cors:
+      allowedOrigins:
+        - '*' # Or specify your frontend URL
+      allowedMethods:
+        - POST
+      allowedHeaders:
+        - Content-Type
+      allowCredentials: false
+    
 
 functions:
   sendEmail:
