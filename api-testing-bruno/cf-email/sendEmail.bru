@@ -1,0 +1,22 @@
+meta {
+  name: sendEmail
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://63msl6ebsb.execute-api.ap-south-1.amazonaws.com/send-email
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "source": "",
+      "destination": ["starindustries05@gmail.com", "sidhant.exe@clanflare.com"],
+      "subject": "Hello from AWS Lambda & SES",
+      "bodyText": "This is a test email sent from an AWS Lambda function!",
+      "bodyHtml": "<h1>Hello</h1><p>This is a test email.</p>"
+  }
+  
+}
